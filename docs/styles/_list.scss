@@ -1,0 +1,50 @@
+.bg {
+  @include transition();
+
+  background-color: $bg-nav-item;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-8px);
+
+    background-color: $color-black;
+
+    .material-symbols-outlined {
+      color: $color-white;
+    }
+  }
+
+  &-card {
+    @include transition();
+    padding: $p-2;
+
+    width: 605px;
+    height: 355px;
+
+    background: url(../../img/bg-card1.jpg) no-repeat;
+    background-size: 150%;
+    background-position: 0% 0%;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-15px);
+    }
+
+    &_2 {
+      @include transition();
+      padding: $p-2;
+
+      width: 605px;
+      height: 355px;
+
+      background: url(../../img/bg-card2.jpg) no-repeat;
+      background-size: 150%;
+      background-position: 10% 10%;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-15px);
+      }
+    }
+  }
+}

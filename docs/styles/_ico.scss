@@ -1,0 +1,10 @@
+.material-symbols-outlined {
+  color: $color-ico-btn;
+}
+
+.search-ico {
+  @include transform(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}

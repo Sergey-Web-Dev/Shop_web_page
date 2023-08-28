@@ -1,0 +1,12 @@
+@mixin container() {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@mixin transform($arg1, $arg2) {
+  transform: translate($arg1, $arg2);
+}
+
+@mixin transition() {
+  transition: all 0.2s;
+}

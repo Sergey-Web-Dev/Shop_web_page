@@ -1,0 +1,11 @@
+.nav-item {
+  font-family: $causten-500;
+  font-size: $font-22;
+
+  color: $color-ico-btn;
+
+  &:hover {
+    font-family: $causten-700;
+    color: $color-black;
+  }
+}

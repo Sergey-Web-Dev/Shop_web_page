@@ -1,0 +1,67 @@
+.wrapper {
+  padding: $p-10 $p-5;
+}
+
+.section {
+  &__block {
+    margin: $m-8 0;
+
+    &__description {
+    }
+  }
+}
+
+.big-saving-zone {
+  padding: $p-2;
+
+  width: 400px;
+  height: 400px;
+
+  background: url(../../img/bsz-1.jpg) no-repeat;
+  background-size: 220%;
+  background-position: 80% 0%;
+
+  &-2 {
+    padding: $p-2;
+
+    width: 400px;
+    height: 400px;
+
+    background: url(../../img/bsz-2.jpg) no-repeat;
+    background-size: 180%;
+    background-position: 90% 0%;
+  }
+
+  &-3 {
+    padding: $p-2;
+
+    width: 400px;
+    height: 400px;
+
+    background: url(../../img/bsz-3.jpg) no-repeat;
+    background-size: 150%;
+    background-position: 50% 0%;
+  }
+
+  &-4 {
+    padding: $p-2;
+
+    width: 610px;
+    height: 395px;
+
+    background: url(../../img/bsz-4.jpg) no-repeat;
+    background-size: 120%;
+    background-position: 80% 0%;
+  }
+
+  &-5 {
+    padding: $p-2;
+
+    width: 610px;
+    height: 395px;
+
+    background: url(../../img/bsz-5.jpg) no-repeat;
+    background-size: 110%;
+    background-position: 100% 0%;
+  }
+}

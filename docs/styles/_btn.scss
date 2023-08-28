@@ -1,0 +1,20 @@
+.btn {
+  &-shop {
+    @include transition();
+
+    padding: $p-1 $p-5;
+
+    font-family: $causten-700;
+    font-size: $font-24;
+
+    background-color: $color-white;
+    color: $color-btn-shop;
+
+    &:hover {
+      transform: translateY(-15px) translateX(5px);
+
+      color: $color-white;
+      background-color: $color-black;
+    }
+  }
+}

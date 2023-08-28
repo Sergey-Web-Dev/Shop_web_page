@@ -1,0 +1,72 @@
+.title {
+  font-family: $CoreSansC-800;
+  font-size: $font-78;
+
+  &-section {
+    font-size: $font-36;
+  }
+
+  &-prescription {
+    font-family: $Montserrat-800;
+    font-size: $font-18;
+  }
+
+  &-card {
+    font-size: $font-34;
+  }
+
+  &-discount {
+    font-family: $causten-500;
+    font-size: $font-16;
+  }
+
+  &-explore {
+    position: relative;
+    display: inline;
+    font-size: $font-20;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -2px;
+
+      width: 140px;
+      height: 1px;
+      background-color: $color-white-0-5;
+    }
+
+    &:hover {
+      display: inline;
+      padding: $p-0-5;
+      border: 4px solid white;
+    }
+  }
+
+  &-page {
+    position: relative;
+    font-family: $CoreSansC-600;
+    font-size: $font-34;
+
+    color: $color-btn-shop;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10%;
+
+      width: 6px;
+      height: 30px;
+      background-color: $color-page-border-left;
+      border-radius: 5rem;
+    }
+  }
+
+  &-cardProduct {
+    font-family: $causten-700;
+    font-size: $font-20;
+
+    color: $color-btn-shop;
+  }
+}

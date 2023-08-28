@@ -1,0 +1,18 @@
+.search-field {
+  position: relative;
+
+  input {
+    background-color: $bg-nav-item;
+
+    ::placeholder {
+      font-family: $causten-400;
+      font-size: $font-16;
+
+      color: $color-ico-btn;
+    }
+
+    &:focus {
+      background-color: $bg-nav-item;
+    }
+  }
+}
