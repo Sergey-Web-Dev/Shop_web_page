@@ -1,3 +1,17 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(211, 211, 211);
+}
+
+::-webkit-scrollbar-thumb {
+  background: orange;
+
+  border-radius: 5rem;
+}
+
 body {
   font-family: $causten-500;
   font-size: $font-22;

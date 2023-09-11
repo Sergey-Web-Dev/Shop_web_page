@@ -1,1 +1,49 @@
+.men-card {
+  @include transition();
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-15px);
+  }
+}
 
+.arrow-card {
+  @include transition();
+  &:hover {
+    cursor: pointer;
+    transform: rotate(-360deg) scale(2);
+  }
+}
+
+.brand-img {
+  @include transition();
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-15px);
+  }
+}
+
+.card-product {
+  @include transition();
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-15px);
+  }
+
+  .heart {
+    @include transition();
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.3);
+    }
+  }
+}
+
+.img-market {
+  @include transition();
+
+  &:hover {
+    transform: translateY(-15px);
+  }
+}

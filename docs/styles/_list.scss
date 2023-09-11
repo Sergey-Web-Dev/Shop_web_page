@@ -47,4 +47,34 @@
       }
     }
   }
+
+  &-flowers {
+    background: url(../../img/bg-flowers.jpg);
+    background-position: center;
+    background-size: 100%;
+  }
+
+  &-people {
+    background: url(../../img/bg-people.jpg);
+    background-size: 100%;
+    background-position: 0 10%;
+  }
+}
+
+.list {
+  &-social {
+    @include transition();
+
+    background-color: $color-white;
+
+    &:hover {
+      cursor: pointer;
+
+      background-color: $color-orange;
+
+      svg {
+        fill: $color-white;
+      }
+    }
+  }
 }

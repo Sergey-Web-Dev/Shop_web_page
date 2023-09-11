@@ -18,3 +18,98 @@
 @import "./header";
 @import "./sections";
 @import "./footer";
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$custom-font-sizes: (
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  22: 22px,
+  24: 24px,
+  28: 28px,
+  34: 34px,
+  38: 38px,
+  50: 50px,
+);
+
+$font-sizes: map-merge($custom-font-sizes, $font-sizes);
+
+$custom-theme-colors: (
+  "gray-card": $color-btn-shop,
+  "card-naming": $color-card-naming,
+  "card-naming-2": $color-card-naming-2,
+  "yellow": $color-yellow,
+  "nav-item": $bg-nav-item,
+  "ico-btn": $color-ico-btn,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+$utilities: (
+  "width": (
+    property: width,
+    class: w,
+    values: (
+      25: 25%,
+      32: 32%,
+      40: 40%,
+      45: 45%,
+      50: 50%,
+      75: 75%,
+      85: 85%,
+      100: 100%,
+      auto: auto,
+    ),
+  ),
+
+  "height": (
+    property: height,
+    class: h,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      640: 640px,
+      auto: auto,
+    ),
+  ),
+);
+
+$spacers: (
+  0: 0,
+  "0-5": 0.5rem,
+  1: 1rem,
+  "1-2": 1.2rem,
+  "1-5": 1.5rem,
+  2: 2rem,
+  "2-2": 2.2rem,
+  "2-5": 2.5rem,
+  3: 3rem,
+  4: 4rem,
+  "4-5": 4.5rem,
+  5: 5rem,
+  "5-5": 5.5rem,
+  6: 6rem,
+  8: 8rem,
+  10: 10rem,
+  12: 12rem,
+);
+
+$position-values: (
+  0: 0,
+  5: 5%,
+  10: 10%,
+  15: 15%,
+  25: 25%,
+  30: 30%,
+  50: 50%,
+  85: 85%,
+  100: 100%,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

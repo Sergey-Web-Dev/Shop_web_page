@@ -18,3 +18,14 @@
     }
   }
 }
+
+.shop-wall {
+  @include transition();
+
+  &:hover {
+    transform: translateY(-15px) translateX(5px);
+
+    color: $color-black;
+    background-color: $color-orange;
+  }
+}

@@ -1,0 +1,7 @@
+.active {
+  @include transition();
+  &:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+  }
+}

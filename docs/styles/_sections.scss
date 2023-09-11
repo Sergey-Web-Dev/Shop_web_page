@@ -4,10 +4,7 @@
 
 .section {
   &__block {
-    margin: $m-8 0;
-
-    &__description {
-    }
+    margin: $m-6 0;
   }
 }
 
@@ -33,8 +30,6 @@
   }
 
   &-3 {
-    padding: $p-2;
-
     width: 400px;
     height: 400px;
 
@@ -64,4 +59,41 @@
     background-size: 110%;
     background-position: 100% 0%;
   }
+}
+
+.roof {
+  position: relative;
+
+  z-index: 10;
+}
+
+.dropdown {
+  position: relative;
+  transition: all 0.5s;
+
+  z-index: 10;
+  &:hover {
+    cursor: pointer;
+
+    transform: scale(1.1);
+  }
+}
+
+.under__block.active-1 {
+  top: 60%;
+}
+
+.under__block {
+  position: absolute;
+  transition: all 1s;
+
+  top: 45%;
+}
+
+.rights.scroll {
+  margin-top: 20rem;
+}
+
+.rights {
+  transition: all 1s;
 }

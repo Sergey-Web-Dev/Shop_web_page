@@ -150,3 +150,14 @@
     }
   }
 }
+
+.swiperComments {
+  .swiper-pagination-bullet-active {
+    background-color: $color-btn-shop;
+  }
+  .swiper-slide {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
