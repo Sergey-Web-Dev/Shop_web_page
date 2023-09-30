@@ -10,3 +10,7 @@
 @mixin transition() {
   transition: all 0.2s;
 }
+
+@mixin transition-1s() {
+  transition: all 1s;
+}

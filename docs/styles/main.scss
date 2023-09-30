@@ -8,6 +8,7 @@
 @import "./btn";
 @import "./text";
 @import "./img";
+@import "./range";
 @import "./ico";
 @import "./form";
 @import "./lists";
@@ -45,6 +46,21 @@ $custom-theme-colors: (
   "yellow": $color-yellow,
   "nav-item": $bg-nav-item,
   "ico-btn": $color-ico-btn,
+  "ico-btn-op": $color-ico-btn-op,
+  "purple": $color-purple,
+  "red": $color-red,
+  "orange": $color-orange-dark,
+  "navy": $color-navy,
+  "broom": $color-broom,
+  "green": $color-green,
+  "yellow-dark": $color-yellow-dark,
+  "gray-dark": $color-gray-dark,
+  "white-dark": $color-white-dark,
+  "pink": $color-pink,
+  "blue": $color-blue,
+  "white": $color-white,
+  "black": $color-black,
+  "womens-clothing": $color-womens-clothing,
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
@@ -54,6 +70,8 @@ $utilities: (
     property: width,
     class: w,
     values: (
+      8: 8.3%,
+      15: 15%,
       25: 25%,
       32: 32%,
       40: 40%,
@@ -61,7 +79,12 @@ $utilities: (
       50: 50%,
       75: 75%,
       85: 85%,
+      95: 95%,
       100: 100%,
+      150: 150%,
+      37: 37px,
+      61: 61px,
+      282: 282px,
       auto: auto,
     ),
   ),
@@ -74,7 +97,10 @@ $utilities: (
       50: 50%,
       75: 75%,
       100: 100%,
+      370: 370px,
       640: 640px,
+      32: 32px,
+      37: 37px,
       auto: auto,
     ),
   ),
@@ -107,9 +133,26 @@ $position-values: (
   15: 15%,
   25: 25%,
   30: 30%,
+  45: 45%,
   50: 50%,
   85: 85%,
   100: 100%,
+  850: 850px,
+  940: 940px,
+  1120: 1120px,
+  1250: 1250px,
+);
+
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

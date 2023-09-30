@@ -97,3 +97,108 @@
 .rights {
   transition: all 1s;
 }
+
+// men page
+
+.price-block,
+.colors-block,
+.size-block,
+.dress-block:hover {
+  cursor: pointer;
+}
+
+
+
+.hiden-price {
+  @include transition-1s();
+  position: absolute;
+
+  left: 0;
+  top: -20px;
+}
+
+// span rigth arrow
+.right-dir {
+  @include transition-1s();
+}
+.arr-right {
+  transform: rotate(-90deg);
+}
+//
+
+.hiden-price.active-1 {
+  top: 80px;
+}
+
+.hiden-colors.active-1 {
+  top: 80px;
+}
+
+.hiden-colors {
+  @include transition-1s();
+  position: absolute;
+
+  left: 0;
+  top: -300px;
+}
+
+.colors-block {
+  @include transition-1s();
+
+}
+
+.colors-block.active-1 {
+  margin-top: 9rem;
+}
+
+.size-block {
+  @include transition-1s();
+
+}
+
+.size-block.active-1 {
+  margin-top: 20rem;
+}
+
+.hiden-sizes {
+  @include transition-1s();
+  position: absolute;
+
+  left: 0;
+  top: -160px;
+}
+
+.hiden-sizes.active-1 {
+  top: 84px;
+}
+
+.dress-block {
+  @include transition-1s();
+
+}
+
+.hiden-dress {
+  @include transition-1s();
+  position: absolute;
+
+  width: 100%;
+
+  top: -260px;
+  
+}
+
+.hiden-dress.active-1 {
+  top: 79px;
+}
+
+.dress-block.active-1 {
+  margin-top: 15rem;
+}
+
+.footer {
+  @include transition-1s();
+}
+
+.footer.active-1 {
+  margin-top: 21rem;
+}
