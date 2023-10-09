@@ -1,0 +1,21 @@
+.color {
+    @include transition();
+
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 25px;
+    margin-bottom: 0.5rem;
+}
+
+.color:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.color.actived {
+    @include transition();
+
+    border: 2px solid blueviolet;
+    padding: 5px;
+    border-radius: 25px;
+}

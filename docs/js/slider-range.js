@@ -4,15 +4,26 @@ const secondRange = document.getElementById("myRange-2");
 const secondValue = document.getElementById("second-value");
 const progress = document.getElementById("progress");
 
+
 firstRange.addEventListener("input", () => {
   firstValue.value = `$${firstRange.value}`;
   progress.style.left = (firstRange.value / firstRange.max) * 100 + "%";
-  if (firstRange.value >= secondRange.value - 250) {
-    firstRange.value = secondRange.value - 250;
+  if (firstRange.value >= secondRange.value - 20) {
+    firstRange.value = secondRange.value - 20;
     firstValue.value = `$${firstRange.value}`;
-    progress.style.left = firstRange.value / 10 + "%";
+    progress.style.left = (firstRange.value / firstRange.max) * 100 + "%";
   }
   
+});
+
+firstRange.addEventListener('change', () => {
+  firstValue.ariaValueNow = `${firstRange.value}`;
+
+});
+
+secondRange.addEventListener('change', () => {
+  secondValue.ariaValueNow = `${secondRange.value}`;
+
 });
 
 firstValue.addEventListener("input", () => {
@@ -27,11 +38,11 @@ firstValue.addEventListener("input", () => {
 
 secondRange.addEventListener("input", () => {
   secondValue.value = `$${secondRange.value}`;
-  progress.style.right = ((secondRange.max - secondRange.value) * 10) / 100 + "%";
-  if (secondRange.value <= +firstRange.value + 250) {
-    secondRange.value = +firstRange.value + 250;
+  progress.style.right = 100 - ((secondRange.value / secondRange.max) * 100)+ "%";
+  if (secondRange.value <= +firstRange.value + 20) {
+    secondRange.value = +firstRange.value + 20;
     secondValue.value = `$${secondRange.value}`;
-    progress.style.right = (secondRange.max - secondRange.value) / 10 + "%";
+    progress.style.right = 100 - ((secondRange.value / secondRange.max) * 100)+ "%";
   }
 });
 

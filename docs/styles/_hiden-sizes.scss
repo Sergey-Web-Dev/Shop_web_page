@@ -1,0 +1,21 @@
+.size {
+    @include transition();
+
+    border: 2px solid rgb(255, 255, 255);
+    padding: 4px;
+    border-radius: 15px;
+}
+
+.size:hover {
+    cursor: pointer;
+    scale: 1.3;
+}
+
+
+.size.actived {
+    @include transition();
+
+    border: 2px solid blueviolet;
+    padding: 4px;
+    border-radius: 15px;
+}
