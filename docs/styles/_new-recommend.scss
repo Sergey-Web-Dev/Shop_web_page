@@ -1,0 +1,29 @@
+.new {
+    @include transition();
+    color: #3F4646;
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.2;
+        text-decoration: underline
+    }
+}
+
+.new.actived {
+    color: $color-page-border-left;
+}
+
+.rec {
+    @include transition();
+    color: #3F4646;
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.2;
+        text-decoration: underline
+    }
+}
+
+.rec.actived {
+    color: $color-page-border-left;
+}

@@ -14,6 +14,9 @@
 @import "./lists";
 @import "./list";
 @import "./link";
+@import "./hiden-colors";
+@import "./hiden-sizes";
+@import "./new-recommend";
 
 @import "./nav";
 @import "./header";
@@ -121,6 +124,7 @@ $spacers: (
   5: 5rem,
   "5-5": 5.5rem,
   6: 6rem,
+  7: 7rem,
   8: 8rem,
   10: 10rem,
   12: 12rem,
