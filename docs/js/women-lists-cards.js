@@ -2,6 +2,7 @@ const lists = `<ul
 id="new-lists"
 class="lists d-flex justify-content-center align-items-center flex-wrap gap-4 pt-5 ps-0"></ul>`
 
+
 const womenCard1 = {
     tag: `<li class="list position-relative card-product">
     <img src="../img/product-1.png" alt="" class="card-1" />
@@ -352,140 +353,73 @@ size: 'L',
 
 const cards = [womenCard1, womenCard2, womenCard3, womenCard4, womenCard5, womenCard6, womenCard7, womenCard8, womenCard9, womenCard10, womenCard11, womenCard12];
 
+var newColors = [];
+var newSizes = [];
+
+const filterCards = (activedColors,activedSizes,oldArr) => {
+  
+  activedColors = [];
+  
+  activedSizes = [];
+
+  for (color of colors) {
+    if(color.classList.contains('actived')) activedColors.push(color.getAttribute('color')) 
+  }
+  
+  for (size of sizes) {
+    if(size.classList.contains('actived')) activedSizes.push(size.getAttribute('size')) 
+  }
+
+  var filtedArr = oldArr.filter( (el) => { if (el.price >= firstValue.ariaValueNow && el.price <= secondValue.ariaValueNow) return el; 
+})
+
+  filtedArr = filtedArr.filter( (el) => {
+  if(activedColors.length == 0) return filtedArr = filtedArr;
+  else {
+    for (someColor of activedColors) {
+      if (el.color == someColor) {
+        return el;
+      } else {
+        continue;
+      }
+    }
+  }
+  });
+
+  filtedArr = filtedArr.filter( (el) => {
+  if(activedSizes.length == 0) return filtedArr = filtedArr;
+  else {
+    for (someSize of activedSizes) {
+      if (el.size == someSize) {
+        return el;
+      } else {
+        continue;
+      }
+    }
+  }
+  });
+
+  document.getElementById('new-lists').remove();
+  sectionPaste.insertAdjacentHTML('beforeend', lists);
+  document.getElementById('new-lists').insertAdjacentHTML('beforeend', filtedArr.map((el) => {
+    return el = el.tag;
+    }).join(''));
+}
 
 // First range value
-firstRange.addEventListener('change', () => {
-  const newcards = cards.filter( (el) => {
-    if(secondValue.hasAttribute('aria-valuenow')) {
-      if (el.price >= firstValue.ariaValueNow && el.price <= secondValue.ariaValueNow) return el;
-    } else {
-      if (el.price >= firstValue.ariaValueNow && el.price <= secondRange.value) return el;
-    }
-  
-    
-    
-}).map((el) => {
-   return el = el.tag;
-})
-
-
-document.getElementById('new-lists').remove();
-sectionPaste.insertAdjacentHTML('beforeend', lists);
-document.getElementById('new-lists').insertAdjacentHTML('beforeend', newcards.join(''));
-})
-
+firstRange.addEventListener('change', () => filterCards(newColors,newSizes,cards));
 
 // Second range value
-secondRange.addEventListener('change', () => {
-  newcards = cards.filter( (el) => {
-    if(firstValue.hasAttribute('aria-valuenow')) {
-      if (el.price >= firstValue.ariaValueNow && el.price <= secondValue.ariaValueNow) return el;
-    } else {
-      if (el.price >= firstRange.value && el.price <= secondValue.ariaValueNow) return el;
-    }
-  
-    
-}).map((el) => {
-   return el = el.tag;
-})
-
-
-document.getElementById('new-lists').remove();
-sectionPaste.insertAdjacentHTML('beforeend', lists);
-document.getElementById('new-lists').insertAdjacentHTML('beforeend', newcards.join(''));
-})
-
+secondRange.addEventListener('change', () => filterCards(newColors,newSizes,cards));
 
 // First price block
-firstValue.addEventListener('input', () => {
-  if(firstValue.value[0] == '$') {
-    if(firstValue.hasAttribute('aria-valuenow')) firstValue.setAttribute('aria-valuenow', firstValue.value.slice(1));
-    else firstValue.setAttribute('aria-valuenow', firstValue.value.slice(1))
-
-    const newcards = cards.filter( (el) => {
-      if(secondValue.hasAttribute('aria-valuenow')) {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondValue.ariaValueNow) return el;
-      } else {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondRange.value) return el;
-      }
-      
-  }).map((el) => {
-     return el = el.tag;
-  })
-  
-  
-  document.getElementById('new-lists').remove();
-  sectionPaste.insertAdjacentHTML('beforeend', lists);
-  document.getElementById('new-lists').insertAdjacentHTML('beforeend', newcards.join(''));
-  }
-  else {
-    if(firstValue.hasAttribute('aria-valuenow')) firstValue.setAttribute('aria-valuenow', firstValue.value);
-    else firstValue.setAttribute('aria-valuenow', firstValue.value)
-
-    const newcards = cards.filter( (el) => {
-      if(secondValue.hasAttribute('aria-valuenow')) {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondValue.ariaValueNow) return el;
-      } else {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondRange.value) return el;
-      }
-    
-      
-      
-  }).map((el) => {
-     return el = el.tag;
-  })
-  
-  
-  document.getElementById('new-lists').remove();
-  sectionPaste.insertAdjacentHTML('beforeend', lists);
-  document.getElementById('new-lists').insertAdjacentHTML('beforeend', newcards.join(''));
-  }
-
-})
+firstValue.addEventListener('input', () => filterCards(newColors,newSizes,cards))
 
 // Second price block
-secondValue.addEventListener('input', () => {
-  if(secondValue.value[0] == '$') {
-    if(secondValue.hasAttribute('aria-valuenow')) secondValue.setAttribute('aria-valuenow', secondValue.value.slice(1));
-    else secondValue.setAttribute('aria-valuenow', secondValue.value.slice(1))
+secondValue.addEventListener('input', () => filterCards(newColors,newSizes,cards))
 
-    const newcards = cards.filter( (el) => {
-      if(secondValue.hasAttribute('aria-valuenow')) {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondValue.ariaValueNow) return el;
-      } else {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondRange.value) return el;
-      }
-      
-  }).map((el) => {
-     return el = el.tag;
-  })
-  
-  
-  document.getElementById('new-lists').remove();
-  sectionPaste.insertAdjacentHTML('beforeend', lists);
-  document.getElementById('new-lists').insertAdjacentHTML('beforeend', newcards.join(''));
-  }
-  else {
-    if(secondValue.hasAttribute('aria-valuenow')) secondValue.setAttribute('aria-valuenow', secondValue.value);
-    else secondValue.setAttribute('aria-valuenow', secondValue.value)
+// Color Block
+colors.forEach( (el) => el.addEventListener('click', () => filterCards(newColors,newSizes,cards)));
 
-    const newcards = cards.filter( (el) => {
-      if(secondValue.hasAttribute('aria-valuenow')) {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondValue.ariaValueNow) return el;
-      } else {
-        if (el.price >= firstValue.ariaValueNow && el.price <= secondRange.value) return el;
-      }
-    
-      
-      
-  }).map((el) => {
-     return el = el.tag;
-  })
-  
-  
-  document.getElementById('new-lists').remove();
-  sectionPaste.insertAdjacentHTML('beforeend', lists);
-  document.getElementById('new-lists').insertAdjacentHTML('beforeend', newcards.join(''));
-  }
-
-})
+// Sizes Block
+sizes.forEach( (el) => el.addEventListener('click', () => filterCards(newColors,newSizes,cards)));

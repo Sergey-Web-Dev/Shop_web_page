@@ -28,9 +28,11 @@ secondRange.addEventListener('change', () => {
 
 firstValue.addEventListener("input", () => {
   if (firstValue.value[0] == "$") {
+    firstValue.setAttribute('aria-valuenow', firstValue.value.slice(1));
     firstRange.value = firstValue.value.slice(1);
     progress.style.left = (firstRange.value / firstRange.max) * 100 + "%";
   } else {
+    firstValue.setAttribute('aria-valuenow', firstValue.value);
     firstRange.value = firstValue.value;
     progress.style.left = (firstRange.value / firstRange.max) * 100 + "%";
   }
@@ -48,12 +50,12 @@ secondRange.addEventListener("input", () => {
 
 secondValue.addEventListener("input", () => {
   if (secondValue.value[0] == "$") {
+    secondValue.setAttribute('aria-valuenow', secondValue.value.slice(1));
     secondRange.value = secondValue.value.slice(1);
-    progress.style.right =
-      ((secondRange.max - secondRange.value) * 10) / 100 + "%";
+    progress.style.right = 100 - ((secondRange.value / secondRange.max) * 100)+ "%";
   } else {
+    secondValue.setAttribute('aria-valuenow', secondValue.value);
     secondRange.value = secondValue.value;
-    progress.style.right =
-      ((secondRange.max - secondRange.value) * 10) / 100 + "%";
+    progress.style.right = 100 - ((secondRange.value / secondRange.max) * 100)+ "%";
   }
 });
