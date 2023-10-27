@@ -2,7 +2,6 @@ const lists = `<ul
 id="new-lists"
 class="lists d-flex justify-content-center align-items-center flex-wrap gap-4 pt-5 ps-0"></ul>`
 
-
 const womenCard1 = {
     tag: `<li class="list position-relative card-product">
     <img src="../img/product-1.png" alt="" class="card-1" />
@@ -355,6 +354,7 @@ const cards = [womenCard1, womenCard2, womenCard3, womenCard4, womenCard5, women
 
 var newColors = [];
 var newSizes = [];
+var filtedCards = [];
 
 const filterCards = (activedColors,activedSizes,oldArr) => {
   
@@ -399,12 +399,20 @@ const filterCards = (activedColors,activedSizes,oldArr) => {
   }
   });
 
+  if (filtedArr.length <= 7 && hidenDress.classList.contains('active-1')) clothingIndiaBlock.classList.add("active-1");
+  else clothingIndiaBlock.classList.remove("active-1");
+
+  filtedCards = filtedArr;
+
+  filtedArr = filtedArr.map((el) => {
+    return el = el.tag;
+    }).join('');
+
   document.getElementById('new-lists').remove();
   sectionPaste.insertAdjacentHTML('beforeend', lists);
-  document.getElementById('new-lists').insertAdjacentHTML('beforeend', filtedArr.map((el) => {
-    return el = el.tag;
-    }).join(''));
+  document.getElementById('new-lists').insertAdjacentHTML('beforeend', filtedArr);
 }
+
 
 // First range value
 firstRange.addEventListener('change', () => filterCards(newColors,newSizes,cards));

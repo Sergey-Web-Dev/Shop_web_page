@@ -4,6 +4,7 @@ const hidenPrice = document.getElementById("hiden-price");
 const colorsBlock = document.getElementById("colors");
 const arrowRight = document.getElementById("arrow-right");
 
+
 priceBlock.addEventListener("click", () => {
   hidenPrice.classList.toggle("active-1");
   colorsBlock.classList.toggle("active-1");
@@ -34,9 +35,11 @@ sizeBlock.addEventListener("click", () => {
 
 // Dress Block
 const hidenDress = document.getElementById("hiden-dress");
+const clothingIndiaBlock = document.getElementById('clothingIndia');
 const arrowRight4 = document.getElementById("arrow-right-4");
 
 dressBlock.addEventListener("click", () => {
   hidenDress.classList.toggle("active-1");
+  if (filtedCards.length <= 7) clothingIndiaBlock.classList.toggle("active-1");
   arrowRight4.classList.toggle("arr-right");
 });

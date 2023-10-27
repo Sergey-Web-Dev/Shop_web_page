@@ -177,6 +177,16 @@
 
 }
 
+.clothingIndia {
+  @include transition-1s();
+
+  margin-top: 5rem;
+}
+
+.clothingIndia.active-1 {
+  margin-top: 25rem;
+}
+
 .hiden-dress {
   @include transition-1s();
   position: absolute;
