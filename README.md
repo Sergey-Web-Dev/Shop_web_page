@@ -20,4 +20,4 @@
 
 ## Picture:
 
-<img src="./docs/img/Home.jpg" >
+<img src="./docs/img/full-page.png" >
